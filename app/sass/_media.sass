@@ -1,0 +1,278 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1300px)
+  .container
+    padding: 0 15px
+
+  h1
+    font-size: 35px
+    max-width: 445px
+
+  .events-box
+    max-width: 32%
+
+  .comments-box
+    max-width: 32%
+
+  .partners-box
+    max-width: 49%
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 1199px)
+  .comments
+    padding: 70px 0 60px
+
+@media only screen and (max-width: 1100px)
+  .calendar-box__text
+    width: 350px
+    h4
+      margin: 0 0 40px
+
+  .name-user h3
+    font-size: 18px
+    line-height: normal
+
+  .name-user
+    font-size: 16px
+    line-height: normal
+
+
+@media only screen and (max-width: 992px)
+  .main-content__item
+    font-size: 16px
+    line-height: normal
+    margin: 0 0 20px
+
+  .main-content__item-text
+    width: 320px
+    height: 60px
+    box-shadow: 4px 5px 0 #FCFDD9
+
+  .main-content__item-icon
+    width: 70px
+    height: 70px
+    padding: 10px
+
+  .main-box
+    padding: 70px 0 250px
+
+  h2
+    font-size: 30px
+    line-height: normal
+
+  .calendar-slider
+    width: 100%
+    margin: 40px 0 0 0
+
+  .calendar-content
+    .box-text
+      width: 100%
+      max-width: none
+
+  .calendar-content h3
+    font-size: 28px
+    line-height: normal
+
+  .calendar-content .box-text
+    font-size: 16px
+    line-height: normal
+
+  .calendar-box__text
+    padding: 50px 20px 30px 40px
+
+  .events
+    padding: 50px 0 55px
+
+  .events-box__links
+    font-size: 16px
+
+  .events-box
+    max-width: 48%
+
+  .comments-box
+    max-width: 48%
+
+  .comments .btn
+    margin: 0 auto
+
+  .partners-box a
+    font-size: 20px
+    line-height: normal
+
+  .partners-box
+    height: 200px
+
+  .question-box
+    width: 280px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 870px)
+  .question-box
+    width: 100%
+    margin: 0 0 10px
+    &:last-child
+      margin: 0
+
+  .menu li
+    margin: 0 15px 0 0
+    a
+      font-size: 12px
+
+@media only screen and (max-width: 840px)
+  .main-box
+    flex-direction: column
+    align-items: center
+
+  h1
+    width: 100%
+    max-width: none
+    margin: 0 auto 30px
+    text-align: center
+    font-size: 30px
+    line-height: normal
+    br
+      display: none
+
+  .main-content
+    margin: 0 auto
+
+  h2
+    font-size: 26px
+
+@media only screen and (max-width: 768px)
+  .logo
+    font-size: 16px
+    line-height: normal
+
+  .logo-text
+    max-width: 180px
+
+  .btn-menu
+    font-size: 16px
+
+  .btn-search
+    width: 20px
+
+  .calendar-box__text
+    padding: 50px 20px 30px 40px
+    h4
+      font-size: 18px
+      line-height: normal
+
+  .list-dots
+    font-size: 16px
+
+  footer .container
+    flex-direction: column
+    align-items: center
+
+  .menu
+    margin: 20px auto 0
+    width: 100%
+    justify-content: space-around
+    li
+      margin: 0 0 5px
+      &:last-child
+        margin: 0 0 5px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 670px)
+  .calendar-box__text
+    width: 300px
+
+  .list-dots
+    padding: 0
+
+  .calendar-box
+    height: 350px
+
+  .events-box__image
+    height: 200px
+
+  .comments-box
+    max-width: none
+
+  .partners-box
+    max-width: none
+    margin: 0 0 30px
+    height: 150px
+    a
+      font-size: 18px
+    &:last-child
+      margin: 0
+
+  .partners
+    padding: 40px 0
+
+@media only screen and (max-width: 575px)
+  .calendar-box
+    height: auto
+    flex-direction: column
+    align-items: center
+    width: 100%
+
+  .calendar-box__text
+    position: relative
+    height: auto
+    padding: 50px 40px
+    order: 1
+    width: 100%
+
+  .calendar-content h3
+    font-size: 20px
+
+@media only screen and (max-width: 480px)
+  .logo
+    font-size: 12px
+
+  .logo-text
+    max-width: 135px
+
+  h1
+    font-size: 23px
+
+  h2
+    font-size: 21px
+
+  .main-content__item
+    font-size: 14px
+
+  .main-content__item-text
+    width: 250px
+
+  .main-slider
+    clip-path: polygon(0 0, 100% 0%, 100% 95%, 0 100%)
+
+  .main-box
+    padding: 70px 0 100px
+
+  .calendar
+    margin: -100px 0 0 0
+    padding: 130px 0 50px
+    h2
+      text-align: center
+      margin: 0 auto 40px
+
+  .list-dots li
+    margin: 0 0 15px
+
+  .events-box
+    max-width: none
+    margin: 0 0 30px
+
+  .events .btn
+    margin: 0 auto
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 420px)
+  .comments-box__top
+    flex-direction: column
+    align-items: center
+    text-align: center
+    .preview
+      margin: 0 auto 10px
+
