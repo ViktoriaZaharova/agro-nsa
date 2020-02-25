@@ -440,6 +440,8 @@ main {
   outline: none;
   opacity: .75;
   cursor: pointer; }
+  .slick-arrow:before {
+    display: none; }
   .slick-arrow:hover, .slick-arrow:focus {
     outline: none; }
 
@@ -447,11 +449,17 @@ main {
   background: url("../img/arrow-right.svg") #333333 no-repeat center;
     background-size: 12px;
   right: 0; }
+  .slick-next:hover, .slick-next:focus {
+    background: url("../img/arrow-right.svg") #333333 no-repeat center;
+      background-size: 12px; }
 
 .slick-prev {
   background: url("../img/arrow-left.svg") #333333 no-repeat center;
     background-size: 12px;
   left: 0; }
+  .slick-prev:hover, .slick-prev:focus {
+    background: url("../img/arrow-left.svg") #333333 no-repeat center;
+      background-size: 12px; }
 
 .events {
   padding: 85px 0 90px; }

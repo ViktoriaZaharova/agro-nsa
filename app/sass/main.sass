@@ -375,18 +375,27 @@ main
   outline: none
   opacity: .75
   cursor: pointer
+  &:before
+    display: none
   &:hover, &:focus
     outline: none
+
 
 .slick-next
   background: url("../img/arrow-right.svg") #333333 no-repeat center
     size: 12px
   right: 0
+  &:hover, &:focus
+    background: url("../img/arrow-right.svg") #333333 no-repeat center
+      size: 12px
 
 .slick-prev
   background: url("../img/arrow-left.svg") #333333 no-repeat center
     size: 12px
   left: 0
+  &:hover, &:focus
+    background: url("../img/arrow-left.svg") #333333 no-repeat center
+      size: 12px
 
 
 //events
