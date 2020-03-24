@@ -85,6 +85,7 @@ a
   text-decoration: none
   transition: .3s ease
   outline: none
+
   &:hover, &:focus
     outline: none
     text-decoration: none
@@ -131,6 +132,7 @@ h2
   background: #64A400
   height: 40px
   width: 200px
+  font-family: 'PFBeauSansPro-Regular', sans-serif
   &:hover
     background: #538800
 
@@ -140,11 +142,50 @@ h2
 .w-100
   width: 100%
 
+.nav-slider
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  width: auto
+  .slick-arrow
+    position: relative
+    top: 0
+    transform: translate(0)
+    right: 0
+    left: 0
+    border-radius: 0
+    transition: .3s ease
+  .slick-prev
+    background: url(../img/arrow-left.svg) #64A400 no-repeat center
+      size: 15px
+    margin: 0 10px 0 0
+    &:hover
+      background: url(../img/arrow-left.svg) #538800 no-repeat center
+        size: 15px
+  .slick-next
+    background: url(../img/arrow-right.svg) #64A400 no-repeat center
+      size: 15px
+    &:hover
+      background: url(../img/arrow-right.svg) #538800 no-repeat center
+        size: 15px
+
+
+.line-title
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: space-between
+  h2
+    width: auto
+    margin: 0
+
 
 //header
 header
   padding: 10px 0 4px
   background: #fff
+
   .container
     justify-content: space-between
     align-items: center
@@ -195,6 +236,7 @@ main
 .main-box
   padding: 71px 0 319px
   position: relative
+
   &:before
     content: ''
     position: absolute
@@ -204,6 +246,7 @@ main
     height: 100%
     z-index: 1
     background: linear-gradient(0deg, rgba(27, 24, 24, 0.1), rgba(27, 24, 24, 0.1))
+
   .container
     justify-content: space-between
     align-items: center
@@ -225,18 +268,23 @@ main
   font-weight: 600
   font-size: 24px
   line-height: 24px
+
   &:last-child
     margin: 0
-  &:first-child
-    .main-content__item-text
-      background: #416B00
-    .main-content__item-icon
-      background: #416B00
+
   &:hover
     .main-content__item-text
       background: #416B00
+
     .main-content__item-icon
       background: #416B00
+
+.main-content__item.active
+  .main-content__item-text
+    background: #416B00
+
+  .main-content__item-icon
+    background: #416B00
 
 .main-content__item-text
   box-shadow: 7px 8px 0 #FCFDD9
@@ -245,6 +293,7 @@ main
   width: 384px
   height: 75px
   transition: .3s ease
+
   .text
     opacity: 0.89
 
@@ -271,6 +320,7 @@ main
 .calendar
   padding: 170px 0 70px
   margin: -160px 0 0 0
+
   h2
     text-align: right
     max-width: 812px
@@ -282,6 +332,7 @@ main
   align-items: center
   flex-wrap: wrap
   justify-content: space-between
+
   .box-text
     color: #818183
     font-size: 18px
@@ -289,6 +340,7 @@ main
     font-weight: 600
     max-width: 311px
     width: 100%
+
   h3
     color: #4F4F4F
     margin: 0 0 20px
@@ -329,6 +381,7 @@ main
   z-index: 2
   padding: 71px 20px 40px 32px
   color: #fff
+
   h4
     font-size: 24px
     font-weight: 600
@@ -342,27 +395,30 @@ main
   font-weight: 500
   line-height: 24px
   padding: 0 0 0 40px
+
   li
     position: relative
     margin: 0 0 23px
     padding: 0 0 0 19px
+
     &:before
       content: ''
       position: absolute
       left: 0
       top: 50%
-      transform: translate(0,-50%)
+      transform: translate(0, -50%)
       background: #ffff
       border-radius: 50%
       width: 5px
       height: 5px
+
     &:last-child
       margin: 0
 
 .slick-arrow
   position: absolute
   top: 50%
-  transform: translate(0,-50%)
+  transform: translate(0, -50%)
   z-index: 2
   border-radius: 5px
   width: 40px
@@ -375,8 +431,10 @@ main
   outline: none
   opacity: .75
   cursor: pointer
+
   &:before
     display: none
+
   &:hover, &:focus
     outline: none
 
@@ -385,6 +443,7 @@ main
   background: url("../img/arrow-right.svg") #333333 no-repeat center
     size: 12px
   right: 0
+
   &:hover, &:focus
     background: url("../img/arrow-right.svg") #333333 no-repeat center
       size: 12px
@@ -393,6 +452,7 @@ main
   background: url("../img/arrow-left.svg") #333333 no-repeat center
     size: 12px
   left: 0
+
   &:hover, &:focus
     background: url("../img/arrow-left.svg") #333333 no-repeat center
       size: 12px
@@ -401,13 +461,14 @@ main
 //events
 .events
   padding: 85px 0 90px
+
   .btn
     margin: 0 0 0 auto
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
 
 .events-content
   display: flex
-  align-items: flex-start
+  align-items: stretch
   justify-content: space-between
   flex-wrap: wrap
   margin: 40px 0 0 0
@@ -421,7 +482,8 @@ main
   margin: 0 0 50px
   border-radius: 10px
   background: #fff
-  
+  border: 1px solid #F2F2F2
+
 
 .events-box__image
   width: 100%
@@ -431,6 +493,7 @@ main
   justify-content: center
   overflow: hidden
   border-radius: 10px 10px 0 0
+
   img
     width: 100%
     height: 100%
@@ -441,7 +504,9 @@ main
   align-items: flex-start
   flex-direction: column
   padding: 18px 20px 26px
+  box-sizing: border-box
   color: #333333
+
   .date
     font-size: 14px
     line-height: 17px
@@ -452,7 +517,8 @@ main
   font-weight: 600
   line-height: 22px
   color: #333333
-  margin: 8px 0
+  margin: 14px 0
+
   &:hover
     color: #000
 
@@ -461,13 +527,32 @@ main
   font-weight: bold
   font-size: 14px
   line-height: 17px
+  display: flex
+  align-items: center
+
   &:hover
     color: #333
+
+.category-links__icon, .tag-category__icon
+  width: 20px
+  height: 20px
+  fill: #64A400
+  margin: 0 10px 0 0
+
+.tag-category
+  display: flex
+  align-items: center
+  margin: 14px 0 0
+  color: #64A400
+  font-size: 14px
+  &:hover
+    color: #000
 
 
 //comments
 .comments
   padding: 101px 0 74px
+
   .btn
     margin: 0 0 0 auto
 
@@ -485,12 +570,14 @@ main
   width: 100%
   padding: 20px 20px 27px
   margin: 0 0 40px
+  border: 1px solid rgba(14, 102, 173, 0.1)
 
 .comments-box__top
   width: 100%
   display: flex
   align-items: center
   margin: 0 0 14px
+
   .preview
     border-radius: 50%
     display: flex
@@ -501,6 +588,7 @@ main
     width: 100px
     height: 100px
     min-width: 100px
+
     img
       width: 100%
       height: 100%
@@ -511,6 +599,7 @@ main
   font-size: 18px
   font-weight: 600
   line-height: 22px
+
   h3
     font-size: 24px
     color: #333
@@ -524,6 +613,7 @@ main
   display: flex
   flex-direction: column
   align-items: flex-start
+
   h4
     text-transform: uppercase
     color: #333
@@ -532,8 +622,10 @@ main
     line-height: 20px
     margin: 0 0 12px
     min-height: 60px
+
   .text
     font-family: 'Open Sans', sans-serif
+
   .category-links
     margin: 28px 0 0 0
 
@@ -541,6 +633,7 @@ main
 .partners
   padding: 60px 0
   background: #fff
+
   .container
     justify-content: space-between
     align-items: center
@@ -556,11 +649,12 @@ main
   width: 100%
   height: 240px
   position: relative
+
   a
     position: absolute
     left: 50%
     top: 50%
-    transform: translate(-50%,-50%)
+    transform: translate(-50%, -50%)
     z-index: 2
     text-transform: uppercase
     text-align: center
@@ -569,6 +663,7 @@ main
     font-weight: 600
     line-height: 44px
     width: 100%
+
   img
     width: 100%
     height: 100%
@@ -579,8 +674,9 @@ main
   border:
     top: 1px solid #64A400
     bottom: 1px solid #64A400
+
   .container
-    justify-content: space-between
+    justify-content: center
     align-items: center
 
 .question-box
@@ -596,6 +692,7 @@ main
   line-height: 24px
   padding: 0 10px 0 20px
   text-transform: uppercase
+
   .icon
     min-width: 30px
     width: 30px
@@ -603,27 +700,37 @@ main
     align-items: center
     justify-content: center
     margin: 0 30px 0 0
+
     svg
       path
         fill: #64A400
+
   &:hover
     color: #333
+
+  &:nth-child(2)
+    margin: 0 20px
 
 //footer
 footer
   padding: 17px 0 25px
+
   .container
     justify-content: space-between
+
   .logo
     font-size: 14px
     line-height: 17px
+
   .logo-icon
     width: 32px
+
   .logo-text
     flex-direction: column
     align-items: flex-start
 
     max-width: 181px
+
     small
       line-height: 19px
       display: block
@@ -635,18 +742,805 @@ footer
   display: flex
   align-items: center
   flex-wrap: wrap
+
   li
     margin: 0 30px 0 0
+
     &:last-child
       margin: 0
+
     a
       font-size: 14px
       text-transform: uppercase
       line-height: 17px
       color: #333
       font-family: 'PFBeauSansPro-Regular', sans-serif
+
       &:hover
         color: #64A400
+
+//page quede
+.main-page
+  h1
+    width: 100%
+    max-width: none
+  .main-content
+    width: 100%
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+    margin: 80px 0 0
+
+  .main-box
+    padding: 90px 0 266px
+
+  .main-content__item
+    font-size: 18px
+    margin: 0
+
+  .main-content__item-text
+    width: 344px
+    height: 75px
+    padding: 13px 45px
+
+.articles-section
+  margin: 28px 0 0
+
+.articles-section__top
+  width: 100%
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+  flex-wrap: wrap
+
+.articles-section__image
+  width: 419px
+  height: 356px
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+
+.articles-section__info
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  width: calc(100% - 419px)
+  padding: 0 0 0 40px
+  h2
+    max-width: 740px
+    margin: 0
+    color: #333
+  .name-user
+    margin: 0 0 20px
+    h3
+      font-size: 36px
+      line-height: 40px
+    p
+      max-width: 250px
+
+.list-social
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  flex-wrap: wrap
+  margin: auto 0 0 0
+  li
+    width: 30px
+    height: 30px
+    margin: 0 20px 0 0
+    a
+      width: 100%
+      height: 100%
+      &:hover
+        opacity: .7
+    &:last-child
+      margin: 0
+
+svg
+  width: 100%
+  height: 100%
+  display: inline-block
+
+.list-group
+  display: flex
+  align-items: center
+  margin: 0 0 23px
+  flex-wrap: wrap
+  a
+    margin: 0 60px 0 0
+    &:hover
+      color: #000
+    &:last-child
+      margin: 0
+  .category-links
+    font-weight: normal
+
+.articles-section__bottom
+  margin: 40px 0 0 0
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+
+.articles-section__content
+  width: calc(100% - 420px)
+  padding: 0 31px 0 0
+  text-align: justify
+  color: #4F4F4F
+  font-family: 'Open Sans', sans-serif
+  line-height: 25px
+  font-size: 16px
+
+.articles-title
+  font-size: 20px
+  font-weight: 600
+  line-height: 40px
+  margin: 0 0 20px
+
+.color-green
+  color: #416b00
+
+.articles-text
+  p
+    margin: 0 0 10px
+    &:last-child
+      margin: 0
+
+blockquote
+  font-size: 18px
+  font-style: italic
+  font-weight: 600
+  position: relative
+  margin: 30px 0 23px
+  display: flex
+  align-items: flex-start
+  color: #416B00
+  font-family: 'Open Sans', sans-serif
+
+.blockquote-icon
+  min-width: 45px
+  width: 45px
+  height: 45px
+  margin: 0 15px 0 0
+
+.articles-date
+  color: #4F4F4F
+  margin: 11px 0 0
+  font-weight: 600
+
+.btn-group
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  margin: 40px 0
+  .btn-green
+    box-shadow: 10px 10px 20px #DCDCDC, -10px -10px 20px #FFFFFF
+
+.btn-border
+  width: 104px
+  height: 40px
+  border: 1px solid #64A400
+    radius: 5px
+  color: #64A400
+  font-weight: 500
+
+//sidebar
+.sidebar
+  width: 420px
+  display: flex
+  flex-direction: column
+  .sidebar-title
+    margin: 0 0 29px
+    text-transform: uppercase
+    font-size: 24px
+    line-height: 29px
+    font-weight: 600
+  .comments-box
+    margin: 0 0 12px
+    max-width: none
+    border: none
+  .comments-box__bottom h4
+    min-height: auto
+    margin: 0
+  .name-user h3
+    margin: 0 0 8px
+  .all-comment
+    margin: 80px 0 0 auto
+    box-shadow: 10px 10px 20px #DCDCDC, -10px -10px 20px #FFFFFF
+  .events-box
+    max-width: none
+
+//details
+.details
+  margin: 70px 0 87px
+  h2
+    font-size: 30px
+    margin: 0 0 34px
+
+//accordeon
+.list-details
+  counter-reset: item
+  color: #4F4F4F
+  font-size: 24px
+  line-height: 40px
+  font-weight: 600
+  padding: 0 0 0 30px
+  > li
+    counter-increment: item
+    display: flex
+    flex-wrap: wrap
+    position: relative
+    margin: 0 0 10px
+    padding: 0 0 0 40px
+    &:last-child
+      margin: 0
+    &:before
+      content: "1." counters(item, ".") ". "
+      position: absolute
+      left: 0
+      top: 0
+
+.block_hover
+  width: 100%
+  counter-reset: item
+  color: #828282
+  padding: 0 0 0 60px
+  box-sizing: border-box
+  margin: 10px 0
+  display: none
+  li
+    display: block
+    position: relative
+    margin: 0 0 10px
+    &:last-child
+      margin: 0
+    &:before
+      content: "1." counters(item, ".") ". "
+      counter-increment: item
+
+
+.block_title
+  box-sizing: border-box
+  transition: .3s ease
+  cursor: pointer
+  position: relative
+  padding: 0 60px 0 5px
+  &:before
+    content: ''
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translate(0,-50%)
+    background: #64A400 url("../img/arrow-right.svg") no-repeat center
+      size: 12px
+    width: 24px
+    height: 24px
+    cursor: pointer
+    transition: .3s ease
+
+.block_title.in
+  &:before
+    background: #64A400 url("../img/arrow-bottom.svg") no-repeat center
+      size: 18px
+
+//events-content__slider
+.events-content__slider
+
+  .events-box
+    margin: 0 auto 20px
+    max-width: 420px
+
+.events-two
+  .btn
+    width: 123px
+
+//page news
+.main-news
+  .main-box:before
+    background: linear-gradient(0deg, rgba(18, 82, 45, 0.75), rgba(18, 82, 45, 0.75))
+  .main-content
+    max-width: 413px
+
+.category-icon
+  width: 33.3%
+  height: 100px
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 0 50px
+  svg
+    fill: #fff
+    width: 100px
+    height: 100%
+
+.developments
+  padding: 62px 0 30px
+  h2
+    text-align: center
+
+  .all-comment
+    width: 234px
+
+//events-box__line
+.events-box__line
+  flex-direction: row
+  align-items: stretch
+  width: 100%
+  margin: 0 0 20px
+  max-width: none
+  .events-box__image
+    width: 140px
+    height: auto
+    border-radius: 10px 0 0 10px
+  .events-box__text
+    width: calc(100% - 140px)
+    padding: 9px 20px 10px 10px
+  .events-box__links
+    margin: 8px 0 22px
+    font-size: 14px
+    line-height: 17px
+  .tag-category
+    margin: 10px 0 0 0
+
+//main-experts
+.main-experts
+  .main-box
+    padding: 160px 0 300px
+    &:before
+      background: linear-gradient(0deg, rgba(18, 82, 45, 0.75), rgba(18, 82, 45, 0.75))
+
+.alphabet
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  margin: 38px 0 0
+  a
+    color: #FFFFFF
+    font-size: 30px
+    font-weight: 600
+    text-transform: uppercase
+    text-decoration: underline
+    margin: 0 20px 30px 0
+    &:last-child
+      margin: 0 0 30px
+
+//experts-alphabet
+.experts-alphabet
+  padding: 49px 0 0
+
+.letter-title
+  width: 100%
+  color: #333333
+  text-transform: uppercase
+  font-weight: 600
+  font-size: 64px
+  line-height: 78px
+  margin: 0 0 22px
+  padding: 0 22px
+  box-sizing: border-box
+
+.experts-wrapper
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  margin: 0 0 40px
+
+.expert-box
+  width: 33.3%
+  display: flex
+  align-items: center
+  padding: 25px 30px 25px 20px
+  box-sizing: border-box
+  margin: 0 0 20px
+
+.expert-box__photo
+  width: 100px
+  height: 100px
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.expert-box__content
+  width: calc(100% - 100px)
+  padding: 0 0 0 19px
+  color: #4F4F4F
+  font-size: 18px
+  font-weight: 600
+  line-height: 22px
+  h3
+    color: #333333
+    margin: 0 0 8px
+    font-size: 24px
+    line-height: 29px
+
+
+//main-expert__page
+.main-expert__page
+  .main-box
+    padding: 142px 0 394px
+    &:before
+      background: linear-gradient(0deg, rgba(27, 24, 24, 0.5), rgba(27, 24, 24, 0.5))
+
+.expert-info__section
+  .description
+    font-weight: 600
+    font-size: 20px
+    line-height: 40px
+    color: #4F4F4F
+    font-family: 'Open Sans', sans-serif
+  .articles-section__content
+    width: 100%
+    padding: 0
+  .articles-date
+    margin: 48px 0 0 0
+    padding: 0 0 0 50px
+
+//catalog
+.catalog
+  padding: 99px 0 0
+  h2
+    margin: 0 0 60px
+
+.catalog-wrapper
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+
+.col-30
+  width: 33.3%
+
+.catalog-box
+  max-width: 419px
+  height: 300px
+  width: 100%
+  display: flex
+  align-items: center
+  border: 1px solid #E0E0E0
+    radius: 10px
+  box-sizing: border-box
+  color: #4F4F4F
+  font-size: 18px
+  font-weight: 600
+  line-height: 22px
+  padding: 0 27px 0 17px
+  margin: 0 0 20px
+
+.catalog-box__icon
+  width: 126px
+  min-width: 126px
+  height: 126px
+  fill: #64A400
+
+.catalog-box__text
+  padding: 0 0 0 21px
+
+
+//category-page__events
+.category-page__events
+  padding: 40px 0 30px
+
+.category-page__comments
+  padding: 70px 0 10px
+  .comments-box
+    border: none
+    margin: 0 0 20px
+  .comments-box__bottom
+    h4
+      margin: 0
+      min-height: auto
+
+//category__main-page
+.category__main-page
+  .main-box
+    h1
+      max-width: 900px
+
+//main-help
+.main-help
+  .main-box
+    padding: 195px 0 350px
+    &:before
+      background: linear-gradient(0deg, rgba(18, 82, 45, 0.75), rgba(18, 82, 45, 0.75))
+
+
+//help-section
+.help-section
+  padding: 97px 0 100px
+
+
+.help-links
+  position: relative
+  width: 100%
+  margin: 0 0 100px
+  color: #333333
+  font-size: 36px
+  font-weight: 600
+  text-transform: uppercase
+  padding: 0 0 0 50px
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 5px
+    width: 30px
+    height: 30px
+    border: 2px solid #64A400
+      radius: 50%
+
+//archive-events
+.archive-events
+  padding: 50px 0 40px
+
+//sorting-wrapper
+.sorting-wrapper
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  flex-wrap: wrap
+  margin: 0 0 40px
+
+.sorting-box
+  display: flex
+  align-items: center
+  font-family: 'Roboto', sans-serif
+  margin: 0 38px 0 0
+  &:last-child
+    margin: 0
+  p
+    font-size: 14px
+    color: #4F4F4F
+    margin: 0 9px 0 0
+
+.select
+  appearance: none
+  -moz-appearance: none
+  -webkit-appearance: none
+  border: 1px solid #4F4F4F
+    radius: 0
+  font-size: 12px
+  background: #fff url("../img/arrow-bottom-grey.svg") no-repeat 90% center
+    size: 8px
+  padding: 9px 44px 9px 10px
+  height: 40px
+
+
+select
+  font-family: 'Roboto', sans-serif
+  outline: none
+  cursor: pointer
+  color: #4F4F4F
+  &::placeholder
+    color: #4F4F4F
+  &:hover, &:focus
+    outline: none
+
+.archive-events__content
+  padding: 0 0 0 210px
+  .events-box__line, .comments-box__line
+    max-width: none
+    .events-box__image
+      width: 200px
+    .events-box__text
+      padding: 10px 30px 10px 20px
+      width: calc(100% - 200px)
+      flex-direction: row
+      flex-wrap: wrap
+    .events-box__links
+      font-size: 18px
+      line-height: 22px
+    .tag-category
+      margin: 0
+    .category-links
+      margin: 0 10px 0 0
+
+
+.load-more
+  margin: 30px auto 0
+
+//comments-box__line
+.comments-box__line
+  max-width: none
+  width: 100%
+  display: flex
+  flex-direction: row
+  align-items: stretch
+  padding: 20px 30px 10px 20px
+  box-sizing: border-box
+  margin: 0 0 20px
+  .preview
+    width: 100px
+    height: 100px
+    border-radius: 50%
+    overflow: hidden
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  .comments-box__top
+    max-width: 210px
+    width: 100%
+    padding: 0 19px
+    align-items: flex-start
+  .name-user
+    font-size: 14px
+    line-height: 17px
+    h3
+      font-size: 18px
+      line-height: 22px
+      margin: 0 0 7px
+  .date
+    color: #333333
+    font-size: 14px
+    font-family: 'PFBeauSansPro-Regular', sans-serif
+    margin: 14px 0 0 0
+    font-weight: 500
+  .comments-box__bottom
+    width: calc(100% - 300px)
+  h4
+    min-height: auto
+    font-size: 16px
+    line-height: 20px
+    text-transform: none
+  .links-group
+    width: 100%
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    margin: 20px 0 0 0
+  .category-links
+    margin: 0 22px 0 0
+    font-weight: normal
+    font-size: 14px
+
+//question-section
+.question-section
+  padding: 78px 0 0
+  h3
+    color: #333333
+    text-transform: uppercase
+    font-size: 36px
+    font-weight: 600
+    margin: 0 0 42px
+    width: 100%
+  h4
+    color: #333333
+    font-size: 18px
+    font-weight: 600
+    font-family: 'Open Sans', sans-serif
+    width: 100%
+    //margin: 0 0 15px
+
+.list-question
+  width: 100%
+  counter-reset: item
+  color: #333
+  font-weight: 600
+  font-size: 36px
+  > li
+    width: 100%
+    display: inline-block
+    position: relative
+    h3
+      position: relative
+      &:before
+        content: counters(item, ".") ". "
+        counter-increment: item
+        display: inline-block
+        margin: 0 5px 0 0
+
+.block__hover
+  display: none
+
+.block__title
+  position: relative
+  cursor: pointer
+  width: 100%
+  padding: 0 35px 0 0
+  &:before
+    content: ''
+    position: absolute
+    right: 0
+    top: 0
+    background: #fff url("../img/plus.svg") no-repeat center
+      size: 15px
+    width: 35px
+    height: 35px
+    cursor: pointer
+    transition: .3s ease
+    border: 2px solid #64A400
+      radius: 50px
+
+.block__title.in
+  &:before
+    background: #fff url("../img/minus.svg") no-repeat center
+      size: 15px
+
+
+
+.list-sub-question
+  width: 100%
+  counter-reset: item
+  margin: 15px 0 35px
+  padding: 0 0 0 30px
+  color: #333
+  font-size: 18px
+  font-weight: 600
+  > li
+    display: inline-block
+    width: 100%
+    margin: 0 0 35px
+    position: relative
+    font-family: 'Open Sans', sans-serif
+
+    &:last-child
+      margin: 0
+    h4
+      position: relative
+      &:before
+        content: counters(item, ".") ". "
+        counter-increment: item
+        display: inline-block
+        margin: 0 5px 0 0
+
+
+
+.list-sub-question__nested
+  counter-reset: item
+  width: 100%
+  padding: 0 0 0 30px
+  color: #4F4F4F
+  font-size: 16px
+  font-weight: normal
+  font-family: 'Open Sans', sans-serif
+  margin: 20px 0 0 0
+  > li
+    width: 100%
+    display: inline-block
+    position: relative
+    margin: 0 0 20px
+    &:last-child
+      margin: 0
+    &:before
+      content: counters(item, ".") ". "
+      counter-increment: item
+      display: inline-block
+      margin: 0 5px 0 0
+  h5
+    font-weight: 600
+    margin: 0 0 20px
+    &:before
+      content: counters(item, ".") ". "
+      counter-increment: item
+      display: inline-block
+      margin: 0 5px 0 0
+  .sub-title
+    font-weight: 600
+    margin: 0
+    &:before
+      display: none
+
+
+
+.list-sub-question__nested-two
+  width: 100%
+  margin: 0 0 20px
+
+
 
 
 

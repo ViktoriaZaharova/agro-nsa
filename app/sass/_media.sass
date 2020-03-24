@@ -25,6 +25,25 @@
   .comments
     padding: 70px 0 60px
 
+  .main-page
+    .main-content
+      justify-content: space-around
+    .main-content__item
+      margin: 0 0 20px
+
+  .main-news .main-content
+    max-width: none
+    justify-content: space-around
+
+  .catalog-box__icon
+    width: 70px
+    min-width: 70px
+    height: 70px
+
+  .catalog-box
+    font-size: 16px
+    max-width: 97%
+
 @media only screen and (max-width: 1100px)
   .calendar-box__text
     width: 350px
@@ -39,6 +58,15 @@
     font-size: 16px
     line-height: normal
 
+  .expert-box__content
+    font-size: 15px
+    h3
+      font-size: 17px
+
+  .help-links
+    font-size: 26px
+    margin: 0 0 50px
+
 
 @media only screen and (max-width: 992px)
   .main-content__item
@@ -46,15 +74,24 @@
     line-height: normal
     margin: 0 0 20px
 
-  .main-content__item-text
+  .main-content__item-text, .main-page .main-content__item-text
     width: 320px
     height: 60px
     box-shadow: 4px 5px 0 #FCFDD9
+
+  .main-page .main-content
+    margin: 40px 0 0
 
   .main-content__item-icon
     width: 70px
     height: 70px
     padding: 10px
+
+  .main-page .main-content__item
+    font-size: 16px
+
+  .main-content__item-text, .main-page .main-content__item-text
+    padding: 13px 45px
 
   .main-box
     padding: 70px 0 250px
@@ -108,6 +145,49 @@
   .question-box
     width: 280px
 
+  .list-details
+    font-size: 18px
+    line-height: 26px
+    padding: 0
+    > li
+      padding: 0 0 0 30px
+
+  .letter-title
+    font-size: 40px
+    line-height: normal
+
+  .expert-box
+    width: 50%
+
+  .expert-info__section .description
+    font-size: 16px
+    font-weight: normal
+    line-height: normal
+
+  .expert-info__section .articles-date
+    padding: 0
+    margin: 20px 0 0 0
+
+  .catalog-box
+    flex-direction: column
+    align-items: center
+    padding: 20px 15px
+    height: 100%
+    text-align: center
+    margin: 0
+
+  .catalog-box__text
+    padding: 10px 0 0
+
+  .col-30
+    margin: 0 0 20px
+
+  .archive-events__content
+    padding: 0
+
+
+
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 870px)
   .question-box
@@ -115,6 +195,8 @@
     margin: 0 0 10px
     &:last-child
       margin: 0
+    &:nth-child(2)
+      margin: 0 0 10px
 
   .menu li
     margin: 0 15px 0 0
@@ -141,6 +223,43 @@
 
   h2
     font-size: 26px
+
+  .articles-section__top
+    flex-direction: column
+    align-items: center
+
+  .articles-section__image, .articles-section__content, .sidebar
+    width: 100%
+    padding: 0
+
+  .articles-section__image
+    height: auto
+    img
+      height: auto
+
+
+  .articles-section__info
+    width: 100%
+    padding: 20px 0 0
+
+  .list-social
+    margin: 30px 0 0 0
+
+  .sidebar
+    margin: 40px 0 0
+    .all-comment
+      margin: 30px auto 0
+
+  .articles-section__info .name-user h3
+    font-size: 30px
+    line-height: normal
+
+  .question-section h3
+    font-size: 30px
+    line-height: normal
+
+  .list-sub-question, .list-sub-question__nested
+    padding: 0 0 0 10px
 
 @media only screen and (max-width: 768px)
   .logo
@@ -178,6 +297,34 @@
       &:last-child
         margin: 0 0 5px
 
+  .category-icon
+    height: 70px
+    svg
+      width: 70px
+
+  .letter-title
+    font-size: 30px
+    margin: 0 0 5px
+
+  .expert-box
+    padding: 20px
+
+  .main-help .main-box
+    padding: 130px 0 200px
+
+  .help-links
+    font-size: 20px
+    margin: 0 0 30px
+    padding: 0 0 0 30px
+    &:before
+      width: 20px
+      height: 20px
+      top: 0
+
+  .archive-events__content .events-box__line .events-box__links
+    font-size: 14px
+    line-height: normal
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 670px)
   .calendar-box__text
@@ -207,6 +354,13 @@
   .partners
     padding: 40px 0
 
+@media only screen and (max-width: 650px)
+  .expert-box
+    width: 100%
+
+  .col-30
+    width: 50%
+
 @media only screen and (max-width: 575px)
   .calendar-box
     height: auto
@@ -224,6 +378,25 @@
   .calendar-content h3
     font-size: 20px
 
+  .sorting-wrapper
+    flex-direction: column
+    align-items: flex-end
+
+  .sorting-box
+    margin: 0 0 20px
+
+  .comments-box__line
+    flex-direction: column
+    align-items: center
+    .comments-box__top
+      max-width: 100%
+      padding: 10px 0
+      text-align: center
+    .name-user
+      width: 100%
+    .comments-box__bottom
+      width: 100%
+
 @media only screen and (max-width: 480px)
   .logo
     font-size: 12px
@@ -240,7 +413,12 @@
   .main-content__item
     font-size: 14px
 
-  .main-content__item-text
+  .main-page .main-content__item
+    font-size: 13px
+    .main-content__item-text
+      padding: 13px 20px 13px 40px
+
+  .main-content__item-text, .main-page .main-content__item-text
     width: 250px
 
   .main-slider
@@ -266,6 +444,35 @@
   .events .btn
     margin: 0 auto
 
+  .col-30
+    width: 100%
+
+  .catalog-box
+    max-width: none
+
+  .catalog
+    padding: 40px 0 0 0
+    h2
+      margin: 0 0 30px
+
+  .archive-events__content .events-box__line
+    flex-direction: column
+    align-items: center
+    .events-box__image
+      width: 100%
+      border-radius: 10px 10px 0 0
+    .events-box__text
+      width: 100%
+    .category-links
+      margin: 0 0 10px
+
+  .select
+    padding: 9px 24px 9px 10px
+    height: 35px
+
+  .question-section h3
+    font-size: 22px
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 420px)
@@ -276,3 +483,93 @@
     .preview
       margin: 0 auto 10px
 
+  .articles-title
+    font-size: 18px
+    line-height: normal
+
+  .articles-section__content
+    line-height: normal
+
+  .blockquote-icon
+    width: 25px
+    min-width: 25px
+    height: 25px
+
+  blockquote
+    font-size: 16px
+
+  .btn-group
+    flex-direction: column
+    align-items: center
+    .btn
+      width: 200px
+      margin: 0 auto 10px
+      &:last-child
+        margin: 0
+
+  .block_hover
+    padding: 0 0 0 10px
+
+  .nav-slider .slick-arrow
+    width: 30px
+    height: 30px
+    -webkit-background-size: 12px
+    background-size: 12px
+
+  .list-details
+    font-size: 16px
+    line-height: 24px
+    > li
+      padding: 0 0 0 25px
+
+  .block_hover
+    font-size: 14px
+    line-height: normal
+
+  .category-icon
+    height: 50px
+    svg
+      width: 50px
+
+  .events-box__line
+    flex-direction: column
+    align-items: center
+    .events-box__image
+      border-radius: 10px 10px 0 0
+      width: 100%
+      height: 140px
+    .events-box__text
+      width: 100%
+
+  .articles-section__info .name-user h3
+    font-size: 24px
+
+  .expert-box
+    flex-direction: column
+    align-items: center
+
+  .expert-box__photo
+    margin: 0 auto 10px
+
+  .expert-box__content
+    width: 100%
+    padding: 0
+    text-align: center
+
+  .alphabet a
+    font-size: 24px
+    margin: 0 auto 10px
+    &:last-child
+      margin: 0 auto 10px
+
+  .main-experts .main-box, .main-expert__page .main-box
+    padding: 150px 0 200px
+
+  .archive-events__content .comments-box__line
+    .category-links
+      margin: 0 0 10px
+
+  .block__title
+    &:before
+      width: 30px
+      height: 30px

@@ -14,3 +14,76 @@ $('.calendar-slider').slick({
     prevArrow: '<button type="button" class="slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-next"></button>'
 });
+
+$('.events-content__slider').slick({
+    infinity: true,
+    slidesToShow: 3,
+    prevArrow: '<button type="button" class="slick-prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"></button>',
+    appendArrows: '.events-nav',
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 800,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
+});
+
+$('.category-page__slider').slick({
+    infinity: true,
+    slidesToShow: 1,
+    prevArrow: '<button type="button" class="slick-prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"></button>',
+    appendArrows: '.category-page-nav',
+});
+
+$('.category-page__events-slider').slick({
+    infinity: true,
+    slidesToShow: 1,
+    prevArrow: '<button type="button" class="slick-prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"></button>',
+    appendArrows: '.category-page__events-nav',
+});
+
+$('.list-details .block_title').click(function () {
+    $(this).toggleClass('in').next().slideToggle();
+    $('.list-details .block_title').not(this).removeClass('in').next().slideUp();
+});
+
+$('.list-question .block__title').click(function () {
+    $(this).toggleClass('in').next().slideToggle();
+    $('.list-question .block__hover').not(this).removeClass('in').next().slideUp();
+});
+
+$(function () {
+    // hidden list > 5
+    $('.archive-events__content').each(function () {
+        if ($(this).find('.box__load').length > 6) {
+            $(this).find('.box__load').slice(6).hide();
+        }
+
+    });
+
+    // hidden list > 5
+
+    // show list all
+    $('.load-more').on('click', function (e) {
+        e.preventDefault();
+        $('.box__load:hidden').slice(0, 20).fadeIn();
+
+        var onBlock = $('.box__load:hidden').length;
+        if(onBlock <= 0) {
+            $('.load-more').hide();
+        }
+    });
+
+    // show list all
+});
