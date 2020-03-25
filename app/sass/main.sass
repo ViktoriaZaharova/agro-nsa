@@ -206,11 +206,48 @@ header
   margin: 0 0 0 15px
 
 .btn-menu
-  margin: 0 20px 0 auto
   color: #64A400
   font-size: 24px
   font-weight: 500
   text-transform: uppercase
+  cursor: pointer
+
+.menu-wrapper
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  margin: 0 20px 0 auto
+
+
+.dropdownMenu
+  display: none
+  position: absolute
+  left: 50%
+  transform: translate(-50%,0)
+  top: 100%
+  padding: 20px
+  background: #fff
+  border-radius: 10px
+  z-index: 10
+  white-space: nowrap
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+  min-width: 200px
+  margin: 10px 0 0 0
+  li
+    margin: 0 0 10px
+    width: 100%
+    display: block
+    &:last-child
+      margin: 0
+    a
+      width: 100%
+      font-size: 18px
+      color: #333
+      font-weight: 500
+      &:hover
+        color: #64A400
+
 
 .btn-search
   width: 25px
@@ -234,8 +271,9 @@ main
   object-fit: cover
 
 .main-box
-  padding: 71px 0 319px
+  padding: 71px 0 200px
   position: relative
+  min-height: 685px
 
   &:before
     content: ''
@@ -293,6 +331,8 @@ main
   width: 384px
   height: 75px
   transition: .3s ease
+  display: flex
+  align-items: center
 
   .text
     opacity: 0.89
@@ -414,6 +454,10 @@ main
 
     &:last-child
       margin: 0
+  a
+    color: #fff
+    &:hover
+      color: #333
 
 .slick-arrow
   position: absolute
@@ -771,9 +815,6 @@ footer
     flex-wrap: wrap
     margin: 80px 0 0
 
-  .main-box
-    padding: 90px 0 266px
-
   .main-content__item
     font-size: 18px
     margin: 0
@@ -1048,6 +1089,8 @@ blockquote
     background: linear-gradient(0deg, rgba(18, 82, 45, 0.75), rgba(18, 82, 45, 0.75))
   .main-content
     max-width: 413px
+  h1
+    width: auto
 
 .category-icon
   width: 33.3%
@@ -1093,7 +1136,6 @@ blockquote
 //main-experts
 .main-experts
   .main-box
-    padding: 160px 0 300px
     &:before
       background: linear-gradient(0deg, rgba(18, 82, 45, 0.75), rgba(18, 82, 45, 0.75))
 
@@ -1172,7 +1214,6 @@ blockquote
 //main-expert__page
 .main-expert__page
   .main-box
-    padding: 142px 0 394px
     &:before
       background: linear-gradient(0deg, rgba(27, 24, 24, 0.5), rgba(27, 24, 24, 0.5))
 
@@ -1253,7 +1294,6 @@ blockquote
 //main-help
 .main-help
   .main-box
-    padding: 195px 0 350px
     &:before
       background: linear-gradient(0deg, rgba(18, 82, 45, 0.75), rgba(18, 82, 45, 0.75))
 
@@ -1540,7 +1580,8 @@ select
   width: 100%
   margin: 0 0 20px
 
-
+.btn-wrap
+  margin: 60px 0 50px
 
 
 

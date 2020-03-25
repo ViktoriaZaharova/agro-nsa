@@ -20,6 +20,18 @@
   .partners-box
     max-width: 49%
 
+  .main-page
+    .main-content__item
+      font-size: 16px
+      &-text
+        width: 320px
+        height: 60px
+        padding: 10px 20px 10px 45px
+      &-icon
+        width: 70px
+        height: 70px
+        padding: 10px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1199px)
   .comments
@@ -94,7 +106,8 @@
     padding: 13px 45px
 
   .main-box
-    padding: 70px 0 250px
+    padding: 70px 0 150px
+    min-height: 630px
 
   h2
     font-size: 30px
@@ -186,7 +199,8 @@
     padding: 0
 
 
-
+  .main-content__item-text, .main-page .main-content__item-text
+    padding: 10px 20px 10px 45px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 870px)
@@ -220,6 +234,15 @@
 
   .main-content
     margin: 0 auto
+
+  .main-page .main-content
+    flex-direction: column
+    align-items: center
+    margin: 0
+
+  .main-news
+    .main-content
+      flex-direction: row
 
   h2
     font-size: 26px
@@ -309,8 +332,6 @@
   .expert-box
     padding: 20px
 
-  .main-help .main-box
-    padding: 130px 0 200px
 
   .help-links
     font-size: 20px
@@ -339,7 +360,7 @@
   .events-box__image
     height: 200px
 
-  .comments-box
+  .comments-box, .events-box
     max-width: none
 
   .partners-box
@@ -397,6 +418,23 @@
     .comments-box__bottom
       width: 100%
 
+  .dropdownMenu
+    min-width: 150px
+    li
+      a
+        font-size: 16px
+
+  .comments-slider__mobile, .events-slider__mobile
+    padding: 0 0 50px
+    .slick-arrow
+      top: auto
+      bottom: 0
+      transform: translate(0)
+    .slick-next
+      right: calc(45% - 40px)
+    .slick-prev
+      left: calc(45% - 40px)
+
 @media only screen and (max-width: 480px)
   .logo
     font-size: 12px
@@ -414,9 +452,7 @@
     font-size: 14px
 
   .main-page .main-content__item
-    font-size: 13px
-    .main-content__item-text
-      padding: 13px 20px 13px 40px
+    font-size: 14px
 
   .main-content__item-text, .main-page .main-content__item-text
     width: 250px
@@ -426,6 +462,7 @@
 
   .main-box
     padding: 70px 0 100px
+
 
   .calendar
     margin: -100px 0 0 0
@@ -561,9 +598,6 @@
     margin: 0 auto 10px
     &:last-child
       margin: 0 auto 10px
-
-  .main-experts .main-box, .main-expert__page .main-box
-    padding: 150px 0 200px
 
   .archive-events__content .comments-box__line
     .category-links
