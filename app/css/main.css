@@ -104,10 +104,10 @@ a {
 
 h1 {
   letter-spacing: 0.05em;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 800;
   text-transform: uppercase;
-  line-height: 50px;
+  line-height: normal;
   color: #fff;
   max-width: 800px;
   width: 100%; }
@@ -305,9 +305,9 @@ main {
      object-fit: cover; }
 
 .main-box {
-  padding: 71px 0 200px;
+  padding: 71px 0 170px;
   position: relative;
-  min-height: 685px; }
+  min-height: 500px; }
   .main-box:before {
     content: '';
     position: absolute;
@@ -351,8 +351,8 @@ main {
   margin: 0 0 29px;
   color: #fff;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 18px; }
+  font-size: 16px;
+  line-height: 16px; }
   .main-content__item:last-child {
     margin: 0; }
   .main-content__item:hover .main-content__item-text {
@@ -367,12 +367,12 @@ main {
   background: #416B00; }
 
 .main-content__item-text {
-  -webkit-box-shadow: 7px 8px 0 #FCFDD9;
-          box-shadow: 7px 8px 0 #FCFDD9;
+  -webkit-box-shadow: 5px 6px 0 #FCFDD9;
+          box-shadow: 5px 6px 0 #FCFDD9;
   background: #64A400;
-  padding: 13px 2px 14px 45px;
-  width: 320px;
-  height: 65px;
+  padding: 10px 2px 11px 45px;
+  width: 280px;
+  height: 55px;
   -webkit-transition: .3s ease;
   transition: .3s ease;
   display: -webkit-box;
@@ -385,9 +385,9 @@ main {
     opacity: 0.89; }
 
 .main-content__item-icon {
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border: 3px solid #FFFFFF;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 2px solid #FFFFFF;
     border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -399,8 +399,9 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   background: #64A400;
-  width: 90px;
-  height: 90px;
+  padding: 14px;
+  width: 75px;
+  height: 75px;
   margin: 0 -33px 0 0;
   position: relative;
   -webkit-transition: .3s ease;
@@ -1825,8 +1826,7 @@ select {
   .container {
     padding: 0 15px; }
   h1 {
-    font-size: 35px;
-    max-width: 445px; }
+    max-width: 550px; }
   .events-box {
     max-width: 32%; }
   .comments-box {
