@@ -2214,7 +2214,13 @@ select {
     .comments-slider__mobile .slick-next, .events-slider__mobile .slick-next {
       right: calc(45% - 40px); }
     .comments-slider__mobile .slick-prev, .events-slider__mobile .slick-prev {
-      left: calc(45% - 40px); } }
+      left: calc(45% - 40px); }
+  .articles-section .container {
+    display: block; }
+  .category-page__slider .comments-content .comments-box {
+    display: none; }
+    .category-page__slider .comments-content .comments-box:nth-child(-n+2) {
+      display: block; } }
 
 @media only screen and (max-width: 480px) {
   .logo {
